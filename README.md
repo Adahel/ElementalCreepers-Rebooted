@@ -3,8 +3,11 @@ Elemental Creepers Unofficial
 A rewrite of the original Elemental Creepers. Adds new creepers to Minecraft.
 
 The 5.1.0 unofficial version require LomLib, which can be downloaded here: https://maven.lomeli12.net/net/lomeli/LomLib/1.8.9-5.0.0/
+
 This mod was compiled in the last commit of the original author. There is no guarantee or support for this compilation.
+
 1.8.9 Download:https://github.com/Adahel/ElementalCreepers-Unofficial/releases
+
 All Downloads: http://minecraft.curseforge.com/projects/elemental-creepers/files
 
 ### ModPacks, Videos, Forks, etc
