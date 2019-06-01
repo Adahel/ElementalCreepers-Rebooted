@@ -1,5 +1,6 @@
 buildscript {
     repositories {
+        jcenter()
         mavenCentral()
         maven {
             name = "forge"
@@ -11,18 +12,11 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT'
     }
 }
 
-apply plugin: 'forge'
-
-repositories {
-    maven {
-        name = 'Lomeli Repo'
-        url = "http://maven.lomeli12.net/"
-    }
-}
+apply plugin: 'net.minecraftforge.gradle.forge'
 
 def loadProperties(String sourceFileName) {
     def config = new Properties()
@@ -38,17 +32,17 @@ def loadProperties(String sourceFileName) {
 loadProperties 'build.properties'
 
 dependencies {
-    compile "net.lomeli:LomLib:$lomlibVersion:dev"
+    compile files("libs/LomLib-$lomlib_version-dev.jar")
 }
 
 group = "$group"
-archivesBaseName = "$baseName"
-version = "$releaseVersion"
+archivesBaseName = "$base_name"
+version = "$release_version"
 
 minecraft {
-    version = "$mcVersion-$forgeVersion" // grab latest forge
-    runDir = "eclipse"
-    mappings = "snapshot_20141130"
+    version = "$mc_version-$forge_version-$mc_version" // grab latest forge
+    runDir = "run"
+    mappings = "stable_22"
 }
 
 processResources {
@@ -65,7 +59,7 @@ processResources {
 }
 
 jar {
-	appendix = "universal_$mcVersion"
+	appendix = "universal_$mc_version"
     exclude(['cofh'])
     exclude(['buildcraft'])
     exclude(['morph'])

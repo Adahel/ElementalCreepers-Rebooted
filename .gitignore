@@ -1,8 +1,10 @@
 *.class
 .gradle
+bin
 build
+eclipse
+run
 .settings
-libs
 
 # Package Files #
 *.war
@@ -12,3 +14,5 @@ libs
 *.iml
 build.bat
 build.sh
+ElementalCreepers-Rebooted_Client.launch
+ElementalCreepers-Rebooted_Server.launch

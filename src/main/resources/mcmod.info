@@ -1,11 +1,11 @@
 [
 {
-  "modid" : "ElementalCreepers",
-  "name" : "Elemental Creepers",
-  "description": "Elemental Creepers updated!",
+  "modid" : "elementalcreepers",
+  "name" : "Elemental Creepers Unofficial",
+  "description": "Elemental Creepers updated! Compiled version for minecraft 1.8.9 by Adahel.",
   "version" : "${version}",
   "mcversion": "${mcversion}",
-  "url" : "http://www.lomeli12.net/",
+  "url" : "https://github.com/Adahel/ElementalCreepers-Unofficial",
   "authorList": ["Lomeli12"]
 }
 ]

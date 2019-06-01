@@ -135,7 +135,7 @@ public abstract class EntityBaseCreeper extends EntityCreeper {
 
         this.onGroundSpeedFactor += (f3 - this.onGroundSpeedFactor) * 0.3F;
         this.worldObj.theProfiler.startSection("headTurn");
-        f2 = this.func_110146_f(f1, f2);
+        f2 = this.updateDistance(f1, f2);
         this.worldObj.theProfiler.endSection();
         this.worldObj.theProfiler.startSection("rangeChecks");
 

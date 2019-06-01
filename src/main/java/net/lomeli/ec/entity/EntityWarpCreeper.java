@@ -27,12 +27,13 @@ public class EntityWarpCreeper extends EntityBaseCreeper {
         for (int j = 0; j < entityList.size(); j++) {
             EntityLivingBase entity = entityList.get(j);
             ElementalCreepers.logger.logInfo("Warpping " + entity.getName());
-            Vector3 vec3 = new Vector3(entity);
+            Vector3 vec3 = new Vector3(entity.posX, entity.posY, entity.posZ);
             int i = 0;
             ElementalCreepers.logger.logInfo(vec3.toString());
-            while (vec3.equals(entity.posX, entity.posY, entity.posZ)) {
+            while (vec3.equals(new Vector3(entity.posX, entity.posY, entity.posZ))) {
                 i = rand.nextInt(entityPos.size());
                 vec3 = entityPos.get(i);
+                break;
             }
             ElementalCreepers.logger.logInfo(vec3.toString());
             EntityUtil.teleportTo(worldObj, entity, vec3.getX(), vec3.getY(), vec3.getZ());
@@ -44,7 +45,7 @@ public class EntityWarpCreeper extends EntityBaseCreeper {
     private List<Vector3> getEntityPos(List<EntityLivingBase> list) {
         List<Vector3> posList = Lists.newArrayList();
         for (EntityLivingBase entity : list)
-            posList.add(new Vector3(entity));
+            posList.add(new Vector3(entity.posX, entity.posY, entity.posZ));
         return posList;
     }
 
